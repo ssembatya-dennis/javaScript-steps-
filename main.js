@@ -1,3 +1,4 @@
+'use strict';
 /*
 Objective
 In this challenge, we review some basic concepts that will get you started with this series. Check out the tutorial to learn more about JavaScript's lexical structure.
@@ -42,4 +43,12 @@ function getPerimeter(length, width) {
     // Write your code here
     perimeter = (2 * length) + (2 * width);
     return perimeter;
+}
+
+function factorial(n) {
+    if (n === 0) {
+        return 1
+    } else {
+        return n * factorial(n-1);
+    }
 }
