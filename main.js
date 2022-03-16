@@ -52,3 +52,27 @@ function factorial(n) {
         return n * factorial(n-1);
     }
 }
+
+//////////////////// more xexercises on Functions ///////////////////////////
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+
+function vowelsAndConsonants(s) {
+    let vowels = [];
+    let consonas = [];
+    
+    for(var i=0; i<s.length ; i++) {
+        if((s[i]=='a')||(s[i]=='e')||(s[i]=='i')||(s[i]=='o')||(s[i]=='u')){
+            vowels.push(s[i])
+        } else {
+            consonas.push(s[i]);
+        }
+    }
+    
+    let concatArr = [...vowels, ...consonas];
+    for (let element of concatArr) {
+        console.log(element);
+    };
+}
