@@ -197,3 +197,29 @@ function rangeStep(start, end, step) {
   }
   return array;
 }
+
+function reverseArray(array) {
+  const reversedArray = [];
+
+  for (let counter = array.length - 1; counter >= 0; counter--) {
+    reversedArray.push(array[counter]);
+  }
+  return reversedArray;
+}
+
+const reverseArrayInPlace = function (array) {
+  const lastIndex = array.length - 1;
+
+  for (
+    let currentIndex = 0;
+    currentIndex < Math.floor(array.length / 2);
+    currentIndex++
+  ) {
+    const swappedIndex = lastIndex - currentIndex;
+    const currentIndexElementHolder = array[currentIndex];
+
+    array[currentIndex] = array[swappedIndex];
+    array[swappedIndex] = currentIndexElementHolder;
+  }
+  return array;
+};
