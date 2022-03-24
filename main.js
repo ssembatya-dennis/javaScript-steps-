@@ -144,4 +144,21 @@ const isEven = function (N) {
   }
 };
 
-console.log(isEven(-1));
+function countBs(string) {
+  let countedBs = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === "B") {
+      countedBs++;
+    }
+  }
+  return countedBs;
+}
+function countChar(string, char) {
+  let countedCharacters = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === char) {
+      countedCharacters++;
+    }
+  }
+  return countedCharacters;
+}
