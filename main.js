@@ -88,3 +88,45 @@ for (let count = 0; count < 8; count++) {
   line = line + "#";
   console.log(line);
 }
+
+let currentNumber = 0;
+for (let count = 0; count < 100; count++) {
+  currentNumber = currentNumber + 1;
+  if (currentNumber % 3 == 0 && currentNumber % 5 == 0) {
+    console.log("FizzBuzz");
+  }
+  if (currentNumber % 3 == 0) {
+    console.log("Fizz");
+  } else if (currentNumber % 5 == 0) {
+    console.log("Buzz");
+  } else {
+    console.log(currentNumber);
+  }
+}
+for (let chessbordLine = 0; chessbordLine < 8; chessbordLine++) {
+  if (chessbordLine % 2 === 1) {
+    // chessbord lines #1
+    let chessbordLineCharacter = " ";
+    for (let count = 0; count < 8; count++) {
+      if (count % 2 === 1) {
+        chessbordLineCharacter = chessbordLineCharacter + " ";
+      } else if (count % 2 === 0) {
+        chessbordLineCharacter = chessbordLineCharacter + "#";
+      }
+    }
+    ("/n");
+    console.log(chessbordLineCharacter);
+  } else if (chessbordLine % 2 === 0) {
+    //chessbord lines #2
+    let chessbordLineCharacter = " ";
+    for (let count = 0; count < 8; count++) {
+      if (count % 2 === 1) {
+        chessbordLineCharacter = chessbordLineCharacter + "#";
+      } else if (count % 2 === 0) {
+        chessbordLineCharacter = chessbordLineCharacter + " ";
+      }
+    }
+    ("/n");
+    console.log(chessbordLineCharacter);
+  }
+}
