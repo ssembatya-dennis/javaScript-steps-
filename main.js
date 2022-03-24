@@ -162,3 +162,64 @@ function countChar(string, char) {
   }
   return countedCharacters;
 }
+
+// part one - range function
+function range(firstInteger, lastInterger) {
+  const rangeArray = [];
+  for (let i = firstInteger; i <= lastInterger; i++) {
+    rangeArray.push(i);
+  }
+  return rangeArray;
+}
+
+// soln two  - calculating the sum of a number array
+function sum(array) {
+  let total = 0;
+  for (
+    let elementPosition = 0;
+    elementPosition < array.length;
+    elementPosition++
+  ) {
+    total = total + array[elementPosition];
+  }
+  return total;
+}
+
+// Modifying the range function by adding a third argument of step
+function rangeStep(start, end, step) {
+  if (step == null) step = 1;
+  var array = [];
+
+  if (step > 0) {
+    for (var i = start; i <= end; i += step) array.push(i);
+  } else {
+    for (var i = start; i >= end; i += step) array.push(i);
+  }
+  return array;
+}
+
+function reverseArray(array) {
+  const reversedArray = [];
+
+  for (let counter = array.length - 1; counter >= 0; counter--) {
+    reversedArray.push(array[counter]);
+  }
+  return reversedArray;
+}
+
+const reverseArrayInPlace = function (array) {
+  const lastIndex = array.length - 1;
+
+  for (
+    let currentIndex = 0;
+    currentIndex < Math.floor(array.length / 2);
+    currentIndex++
+  ) {
+    const swappedIndex = lastIndex - currentIndex;
+    const currentIndexElementHolder = array[currentIndex];
+
+    array[currentIndex] = array[swappedIndex];
+    array[swappedIndex] = currentIndexElementHolder;
+  }
+  return array;
+};
