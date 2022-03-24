@@ -88,3 +88,18 @@ for (let count = 0; count < 8; count++) {
   line = line + "#";
   console.log(line);
 }
+
+let currentNumber = 0;
+for (let count = 0; count < 100; count++) {
+  currentNumber = currentNumber + 1;
+  if (currentNumber % 3 == 0 && currentNumber % 5 == 0) {
+    console.log("FizzBuzz");
+  }
+  if (currentNumber % 3 == 0) {
+    console.log("Fizz");
+  } else if (currentNumber % 5 == 0) {
+    console.log("Buzz");
+  } else {
+    console.log(currentNumber);
+  }
+}
