@@ -130,3 +130,18 @@ for (let chessbordLine = 0; chessbordLine < 8; chessbordLine++) {
     console.log(chessbordLineCharacter);
   }
 }
+
+const isEven = function (N) {
+  if (N < 0) {
+    return "??";
+  }
+  if (N === 0) {
+    return true;
+  } else if (N === 1) {
+    return false;
+  } else {
+    return isEven(N - 2);
+  }
+};
+
+console.log(isEven(-1));
